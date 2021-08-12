@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.contenedor {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  padding: 4px 10px;
+  top: 0;
+  background-color: white;
+  position: relative;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.container-menu {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.inicio {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 73px;
+  height: 48px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.hoy {
+  color: black;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.buscador-oculto {
+  display: none;
+}
+
+.buscador {
+  background-color: rgb(225, 225, 225);
+  height: 48px;
+  
+  border-radius: 30px;
+  padding: 0 0 0 16px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+}
+
+.buscador input {
+  border: none;
+  min-width: 50px;
+  background: rgb(225, 225, 225);
+  font-family: 'Roboto', sans-serif;
+  padding-left: 24px;
+  background-image: url(https://cdn.pixabay.com/photo/2017/01/13/01/22/magnifying-glass-1976105_640.png);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  font-size: 17px;
+}
+
+.buscador input:focus {
+  outline: none;
+}
+
+.imagen_menu {
+  width: 48px;
+  height: 48px;
+  padding: 11px;
+}
+
+.flecha {
+  display: flex;
+  align-items: center;
+}
+
+.flecha select {
+  border: none;
+  width: 20px;
+}
+
+.opciones:focus {
+  outline: none;
+}
+
+.boton {
+  border-radius: 50%;
+}
+
+.darkMode {
+  background-color: rgb(32, 32, 44);
+  color: white;
+}
+
+.whiteMode {
+  background-color: white;
+  color: black;
+}
+
+.imagen_moon {
+  width: 48px;
+  height: 48px;
+  padding: 11px;
+}
+
+.imagen_sun {
+  width: 48px;
+  height: 48px;
+  padding: 11px;
+  display: none;
+}
+
+.color {
+  width: 48px;
+  height: 48px;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+
+/*---------------Galeria-----------------*/
+
+.galeria {
+  padding: 10px 40px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 0;
+}
+
+.span-31 {
+  grid-row-end: span 31;
+}
+
+.span-30 {
+  grid-row-end: span 30;
+}
+
+.span-23 {
+  grid-row-end: span 23;
+}
+
+.span-24 {
+  grid-row-end: span 24;
+}
+
+.span-16 {
+  grid-row-end: span 16;
+}
+
+.span-21 {
+  grid-row-end: span 21;
+}
+
+.span-19 {
+  grid-row-end: span 19;
+}
+
+.span-20 {
+  grid-row-end: span 20;
+}
+
+.span-27 {
+  grid-row-end: span 27;
+}
+
+.span-28 {
+  grid-row-end: span 28;
+}
+
+.span-15 {
+  grid-row-end: span 15;
+}
+
+.span-18 {
+  grid-row-end: span 18;
+}
+
+.img-container {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.bg-image {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 20px;
+  transition: 1s;
+  transform-origin: 0 0;
+}
+
+.bg-image:hover {
+  transform: scale(1.5);
+}
+
+.caja {
+  height: 100%;
+  max-width: 228px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+}
+
+.descripcion {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  font-size: 13px;
+}
+
+
+/*---------------------media query-----------------------*/
+
+@media screen and (max-width: 768px) {
+  .inicio {
+    background-color: white;
+    color: black;
+    border-radius: 0;
+  }
+
+  .hoy {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .buscador {
+    display: none;
+  }
+
+  .buscador-oculto {
+    display: block;
+    width: 17px;
+  }
+
+  .menu {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 494px) {
+  .contenedor {
+    display: flex;
+  }
+
+  .container-menu {
+    position: relative;
+  }
+
+  .menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    width: auto;
+    padding: 0;
+    position: sticky;
+  }
+
+  .galeria {
+    padding-top: 30px;
+  }
+
+  .inicio {
+    margin-right: 0;
+  }
+}
